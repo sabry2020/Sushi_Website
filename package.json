@@ -1,0 +1,33 @@
+{
+  "name": "business",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabry2020/e_comm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sabry2020/e_comm/issues"
+  },
+  "homepage": "https://github.com/sabry2020/e_comm#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "forms": "file:forms",
+    "mongoose": "^5.11.15"
+  },
+  "engines": {
+    "node": "12.18.3",
+    "npm": "6.14.9"
+  },
+  "devDependencies": {},
+  "description": ""
+}
