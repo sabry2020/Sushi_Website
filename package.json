@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "run":"node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,6 @@
     "connect-flash": "^0.1.1",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "forms": "file:forms",
     "mongoose": "^5.11.15"
   },
   "engines": {
