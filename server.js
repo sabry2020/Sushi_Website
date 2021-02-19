@@ -11,7 +11,7 @@ const bcrypt = require('bcryptjs');
 
 const fs =require('fs');
 
-const purchaseRouter=require('./routes/purchase');
+// const purchaseRouter=require('./routes/purchase');
 
 const db="mongodb+srv://sabry:Fostyboy555@cluster0.2ilot.mongodb.net/Sushi_Customers?retryWrites=true&w=majority";
 
