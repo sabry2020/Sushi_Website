@@ -13,7 +13,7 @@ const fs =require('fs');
 
 // const purchaseRouter=require('./routes/purchase');
 
-const db="mongodb+srv://sabry:Fostyboy555@cluster0.2ilot.mongodb.net/Sushi_Customers?retryWrites=true&w=majority";
+const db=process.env.MONGO_URI;
 
 
 const Customer=require('./models/Customers');
@@ -79,6 +79,23 @@ res.render('index.ejs');
  })
 
 
+
+ app.post('menu', (req,res)=>{
+//options clicked 
+
+var options=[];
+
+//if opt 1 clicked 
+
+options.push('first option');
+
+
+  console.log(req.body);
+
+
+
+ })
+
  app.get('/purchase',  (req,res)=>{
 
   res.render('pay.ejs');
@@ -139,6 +156,15 @@ app.get('/aboutUs', (req,res)=>{
 
 app.get('/error', (req,res)=>{
   res.render('errors')
+})
+
+app.get('/cart',(req,res)=>{
+
+  var balance=0;
+  
+
+  res.render('Cart.ejs', {balance:balance});
+
 })
 
 app.listen( Port,console.log(`Server running on port ${Port}`));

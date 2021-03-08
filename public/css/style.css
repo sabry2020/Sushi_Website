@@ -1,7 +1,7 @@
 body{
   overflow-x: hidden;
   
-    font-family: Pacifico;
+    font-family:'monospace';
 
     margin: 30px;
     padding: 20px;
@@ -13,10 +13,14 @@ video{
 }
 
 nav, footer{
-    background-color:#383632;
+    background-color:white;
 
 }
 
+footer{
+  background-color:black;
+
+}
 .container {
     position: relative;
     width: 50%;
@@ -112,3 +116,23 @@ height:400px;
   color: black;
 }
 
+.btn{
+  color:orange;
+}
+nav{
+  color:white;
+
+}
+#copyright{
+  color:white;
+
+}
+#privacyPolicy{
+  color:orange;
+  float:right;
+
+}
+
+.btn{
+  font-size:25px
+}
