@@ -154,6 +154,11 @@ app.get('/aboutUs', (req,res)=>{
 })
 
 
+app.get('/contactUs', (req,res)=>{
+  res.render('contactUs.ejs');
+
+})
+
 app.get('/error', (req,res)=>{
   res.render('errors')
 })
@@ -161,7 +166,7 @@ app.get('/error', (req,res)=>{
 app.get('/cart',(req,res)=>{
 
   var balance=0;
-  
+
 
   res.render('Cart.ejs', {balance:balance});
 
