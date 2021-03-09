@@ -1,22 +1,35 @@
 const express =require('express');
 const bodyParser = require('body-parser')
-
  const app= express();
+
+ require('dotenv').config();
+
  const mongoose=require('mongoose');
  const ejs=require('ejs');
- const Port=process.env.PORT||8080;
+ 
 const flash = require('connect-flash');
 const path=require('path');
-const bcrypt = require('bcryptjs');
-
+const bcrypt = require('bcryptjs'); //in case of registerations
 const fs =require('fs');
+
+
+
+const db=process.env.MONGO_URI;
+const Port=process.env.PORT||8080;
+
+
+
+//Routers
+const cartRouter=require('./routes/cart');
+const menuRouter=require('./routes/menu');
+const purchaseRouter=require('./routes/purchase');
 
 // const purchaseRouter=require('./routes/purchase');
 
-const db=process.env.MONGO_URI;
 
-
+//models 
 const Customer=require('./models/Customers');
+const Cart=require('./models/Cart');
 
 // Connect to MongoDB
 mongoose
@@ -47,7 +60,7 @@ app.use(bodyParser.json())
 
 
  app.get('/', (req,res)=>{
-    var name=undefined;
+    var name=undefined;  //will transfer  the name if registered
 
 
 
@@ -56,97 +69,7 @@ app.use(bodyParser.json())
     
      });
 
-
-
-     //Setting Routers
-
-     //app.use('/purchase',purchaseRouter);
-
- app.get('/home', (req,res)=>{
-    
-res.render('index.ejs');
-
-
- });
-
-
-
-
- app.get('/menu', (req,res)=>{
-     res.render('menu.ejs')
-
-
- })
-
-
-
- app.post('menu', (req,res)=>{
-//options clicked 
-
-var options=[];
-
-//if opt 1 clicked 
-
-options.push('first option');
-
-
-  console.log(req.body);
-
-
-
- })
-
- app.get('/purchase',  (req,res)=>{
-
-  res.render('pay.ejs');
   
-  
-  
-   })
-
-
-  app.post('/purchase', (req,res)=>{
-var errors=[];
-
-      const{name, email, number, country}=req.body;
-  Customer.findOne({name:name}).then(registered=>{
-  if(registered){
-  
-     errors.push({ msg: 'name already exists' });
-  res.render('pay.ejs', {
-      name, 
-      email,
-      number, 
-      country,
-  
-  });
-  
-  }
-  else{
-   const newCustomer= new Customer({
-       name:name,
-       email:email,
-       number:number,
-       country:country
-   });
-   
-  newCustomer.save();
-  
-  
-  
-   res.redirect('/');
-  
-   
-  }
-
-})
-  })
- 
-
-
-
-
- 
 app.get('/aboutUs', (req,res)=>{
 
   res.render('aboutUs')
@@ -163,14 +86,11 @@ app.get('/error', (req,res)=>{
   res.render('errors')
 })
 
-app.get('/cart',(req,res)=>{
 
-  var balance=0;
+app.use('/menu', menuRouter);
+app.use('/cart', cartRouter);
+app.use('/purchase', purchaseRouter);
 
-
-  res.render('Cart.ejs', {balance:balance});
-
-})
 
 app.listen( Port,console.log(`Server running on port ${Port}`));
 

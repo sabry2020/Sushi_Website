@@ -11,6 +11,7 @@ router.get('/',  (req,res)=>{
 
 
     router.post('/', (req,res)=>{
+var errors=[];
 
         const{name, email, number, country}=req.body;
     Customer.findOne({name:name}).then(registered=>{
@@ -44,3 +45,7 @@ router.get('/',  (req,res)=>{
 
 })
     })
+
+
+    module.exports=router;
+    
