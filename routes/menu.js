@@ -3,14 +3,8 @@ const router=express.Router();
 var session = require('express-session')
 
 var balance =0;
-const i1='Sushi type 1  ';
-const i2='Sushi type 2';
 
-const i3='Sushi type 3  ';
-const i4='Sushi type 4';
-const i5='Sushi type 5  ';
-const i6='Sushi type 6';
-
+     //test dataset 
 const items=[
 {name:'Sushi type 1  ',price:10 , picture:'static/images/item1.jpeg',checked:false, number:0},
 {name:'Sushi type 2  ',price:44 , picture:'static/images/item3.jpeg',checked:false, number:1},
@@ -27,7 +21,7 @@ router.get('/', (req,res)=>{
 
 
   res.render('menu.ejs', {balance:0,item1:'Enter item 1  price ', item2:'Enter item2 price', items:items})
-  console.log('info avaialable'+req.body)
+  // console.log('info avaialable'+req.body)
 
 })
 
@@ -93,7 +87,7 @@ console.log('Checked items length is '+checkedItems.length );
 
 
 console.log(` balance is ${balance} ` );
-// res.render('Cart.ejs', {balance:balance, test:checkedItems } );
+
 
 
 

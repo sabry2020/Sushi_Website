@@ -14,7 +14,7 @@ const CustomerSchema=new mongoose.Schema({
          type:String,
         required:true
     },
-    country:{
+    address:{
          type:String,
         required:true
     },

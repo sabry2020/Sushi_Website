@@ -9,7 +9,7 @@ const express =require('express');
  
 const flash = require('connect-flash');
 const path=require('path');
-const bcrypt = require('bcryptjs'); //in case of registerations
+const bcrypt = require('bcryptjs'); //in case of registerations(passwords bcryption)
 const fs =require('fs');
 var session = require('express-session');
 
