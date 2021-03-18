@@ -4,10 +4,18 @@ const mongoose=require('mongoose');
 const CartSchema=new mongoose.Schema({
    name:{
 type:String,
-required:true
+required:true,
+default:"Not assigned"
 
    } ,
-   price:{
+   items:{
+      type:Array,
+      required:true
+   }
+
+   ,
+
+   price:{//holding the balance transfered 
 type:Number,
 required:true
 
@@ -16,6 +24,10 @@ required:true
       type:Date,
       default: Date.now
   }
+  //holding the items 
+  
+
+  
 
 });
 

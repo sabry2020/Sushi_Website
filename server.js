@@ -1,5 +1,5 @@
 const express =require('express');
-const bodyParser = require('body-parser')
+
  const app= express();
 
  require('dotenv').config();
@@ -11,8 +11,7 @@ const flash = require('connect-flash');
 const path=require('path');
 const bcrypt = require('bcryptjs'); //in case of registerations
 const fs =require('fs');
-
-
+var session = require('express-session');
 
 const db=process.env.MONGO_URI;
 const Port=process.env.PORT||8080;
@@ -46,7 +45,6 @@ mongoose
 
 // Express body parser
 app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.json())
 
  //serving static files 
 
@@ -86,7 +84,8 @@ app.get('/error', (req,res)=>{
   res.render('errors')
 })
 
-
+//Session middleware 
+app.use(session({ secret:process.env.SESSION_SECRET}) );
 app.use('/menu', menuRouter);
 app.use('/cart', cartRouter);
 app.use('/purchase', purchaseRouter);

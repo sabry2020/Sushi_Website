@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
+const Customer=require('../models/Customers');
+const Cart=require('../models/Cart');
+
 router.get('/',  (req,res)=>{
 
-    res.render('pay.ejs');
+    res.render('pay.ejs', {errors:undefined});
     
     
     
@@ -22,7 +25,8 @@ var errors=[];
         name, 
         email,
         number, 
-        country
+        country,
+        errors:errors
     });
     
     }
@@ -38,7 +42,7 @@ var errors=[];
     
     
     
-     res.redirect('/');
+     res.redirect('/'); //redirect to Success payment page instead 
     
      
     }

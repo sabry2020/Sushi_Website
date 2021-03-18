@@ -11,8 +11,27 @@
 
  <div class="card  mb-4">
 <h1> Till now  : <%= balance %> $</h1>
+
+<h1> What you Ordered So Far </h1>
+
+<ul>
+  <% test.forEach(item=>{ %>
+    <li>
+    <%= item.name %>
+ 
+    <%= item.price %> 
+  </li>
+  <% }); %>
+</ul>
  </div>
 
+
+<form action="/cart" method="POST">
+<button type="submit">
+  Buy  the  <%=test.length%> items
+</button>
+
+</form>
   <!-- retrieve the data from the dataBase Cart object  -->
 
 </body>

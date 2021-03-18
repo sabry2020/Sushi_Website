@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/header.ejs') %>
-<body>
+  
+  
+
+<body >
 
     <%- include('./partials/nav.ejs') %>
 
 
-    <h1>
-        This is the menu file 
-    </h1>
-    <h1>Some of the items on our Lists now </h1>
+   <form action="/menu" method="POST">
+<div style="display: grid; grid-template-columns: auto auto  auto ; " >
+    
+<% items.forEach (item=> { %>
+    <div class="menu-cards " style="margin: 20px;"  >
+    <h2 style="display: inline;">
+<%= item.name %>
+</h2 >
+<img src="<%=item.picture %>" height="200px"  width="250px">
+<h2>
+<%=item.price %> $
+</h2>
 
-<!--
-    <script src="static/js/jssor.js"></script>
-    <div id="jssor_1" style="position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;float: right; ">
-        <div data-u="slides" style="position:absolute;top:0px;left:0px;width:500px;height:380px;overflow:hidden;">
-            <div><img data-u="image" src="static\images\item1.jpeg" class="image"/></div>
-            <div><img data-u="image" src="static\images\item2.jpg" /></div>
-            <div><img data-u="image" src="static\images\item3.jpeg" /></div>
-        </div>
+<input type="checkbox" name="req<%=item.number%>"  > 
+
+
     </div>
-    <script>
-        var options = { $AutoPlay: 1 };
-        var jssor_1_slider = new $JssorSlider$("jssor_1", options);
-    </script>
--->
-<div class="mb-4">
-    <img src="static/images/item1.jpeg">
- </div>
+    
 
- <a class="btn btn-primary mb-1 " style="text-decoration: none;" href="/cart"  >Add to Cart: 50$ </a>
+<% }) %> 
 
- <div class="mb-4">
-    <img src="static/images/item1.jpeg">
- </div>
- <a class="btn btn-primary mb-1 " style="text-decoration: none;" onclick="">Add to Cart </a>
 
- <div class="mb-4">
-    <img src="static/images/item1.jpeg">
- </div>
- 
- <a class="btn btn-primary mb-1 " style="text-decoration: none;" onclick="">Add to Cart </a>
 
- <div class="mb-4">
-    <img src="static/images/item1.jpeg">
- </div>
- <a class="btn btn-primary mb-1 " style="text-decoration: none;" onclick="">Add to Cart </a>
 
- <div class="mb-4">
-    <img src="static/images/item1.jpeg">
- </div>
- <a class="btn btn-primary mb-1 " style="text-decoration: none;"onclick="">Add to Cart </a>
+</div>
+<!-- <script>
+    for(var i=0; i<items.length; i++){
+items[i].setAttribute(name,`req${i}`);
+    }
+</script> -->
+
+
+<h1> End of the menu </h1>
+
+<button style="height:300px; width: 300px; font-size: 50px; font-weight: bold;transform: translateX(500px);">Go to cart
+</button>
+</form>
+
+
+
+
 
 </body>
-
 
 
 
