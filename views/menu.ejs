@@ -22,12 +22,16 @@
 <%=item.price %> $
 </h2>
 <!-- naming the inputs related to the dataset number (req+number)-->
-<input type="checkbox" name="req<%=item.number%>"  > 
+<!-- <input type="checkbox" name="req<%=item.number%>" height="100px" >  -->
 
+
+    
+<label class="container">
+    <input type="checkbox" name="req<%=item.number%>" >
+    <span class="checkmark"></span>
+  </label>
 
     </div>
-    
-
 <% }) %> 
 
 
@@ -38,9 +42,12 @@
 
 
 <h1> End of the menu </h1>
+<button class="mb-10 custom-btn btn-2 " style="margin-bottom: 20px;" type="submit"><h1>Go to Cart</h1></button>
+   
+  </div>
 
-<button style="height:300px; width: 300px; font-size: 50px; font-weight: bold;transform: translateX(500px);">Go to cart
-</button>
+<!-- <button style="height:300px; width: 300px; font-size: 50px; font-weight: bold;transform: translateX(500px);">Go to cart
+</button> -->
 </form>
 
 
