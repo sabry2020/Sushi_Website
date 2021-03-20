@@ -1,6 +1,6 @@
 const express=require('express');
 const router=express.Router();
-var session = require('express-session')
+
 
 var balance =0;
 
@@ -16,7 +16,7 @@ const items=[
 
 
 router.get('/', (req,res)=>{
-  balance=0;
+ 
 
 
 

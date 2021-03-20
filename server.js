@@ -86,6 +86,8 @@ app.get('/error', (req,res)=>{
 
 //Session middleware 
 app.use(session({ secret:process.env.SESSION_SECRET}) );
+
+//Routers
 app.use('/menu', menuRouter);
 app.use('/cart', cartRouter);
 app.use('/purchase', purchaseRouter);
