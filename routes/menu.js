@@ -7,7 +7,7 @@ var balance =0;
      //test dataset 
 const items=[
 {name:'Sushi type 1  ',price:10 , picture:'static/images/item1.jpeg',checked:false, number:0},
-{name:'Sushi type 2  ',price:44 , picture:'static/images/item3.jpeg',checked:false, number:1},
+{name:'Sushi type 2  ',price:1000 , picture:'static/images/item3.jpeg',checked:false, number:1},
 {name:'Sushi type 3  ',price:32 , picture:'static/images/item1.jpeg',checked:false, number:2},
 {name:'Sushi type 4  ',price:156 , picture:'static/images/item3.jpeg',checked:false, number:3},
 {name:'Sushi type 5  ',price:166, picture:'static/images/item1.jpeg',checked:false, number:4},
