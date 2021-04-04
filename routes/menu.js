@@ -20,7 +20,7 @@ router.get('/', (req,res)=>{
 
 
 
-  res.render('menu.ejs', {balance:0,item1:'Enter item 1  price ', item2:'Enter item2 price', items:items})
+  res.render('menu.ejs', {balance:0, items:items})
   // console.log('info avaialable'+req.body)
 
 })
@@ -64,7 +64,6 @@ checkIndex.push(i);
 
 
 //making an array for the checked items 
-
  var checkedItems=[]
 
 for( var i=0; i<checkIndex.length; i++)

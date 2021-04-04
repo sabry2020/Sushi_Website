@@ -70,7 +70,7 @@ app.use(express.urlencoded({ extended: true }));
   
 app.get('/aboutUs', (req,res)=>{
 
-  res.render('aboutUs')
+  res.render('aboutUs.ejs')
 
 })
 
@@ -81,7 +81,13 @@ app.get('/contactUs', (req,res)=>{
 })
 
 app.get('/error', (req,res)=>{
-  res.render('errors')
+  res.render('errors.ejs')
+})
+
+app.get('/privacyPolicy', (req,res)=>{
+
+  res.render('privacyPolicy.ejs');
+
 })
 
 //Session middleware 
