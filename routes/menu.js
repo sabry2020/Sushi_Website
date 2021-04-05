@@ -2,9 +2,14 @@ const express=require('express');
 const router=express.Router();
 
 
-var balance =0;
 
-     //test dataset 
+
+
+router.get('/', (req,res)=>{
+ 
+  var balance =0;
+
+  //test dataset 
 const items=[
 {name:'Fish',price:10 , picture:'static/images/item1.jfif',checked:false, number:0, height:'150px', width:'200px'},
 {name:'Malomma',price:53 , picture:'static/images/item2.jfif',checked:false, number:1, height:'150px', width:'200px'},
@@ -26,11 +31,6 @@ const items=[
 {name:'Blommins Small',price:88,  picture:'static/images/item6.jfif',checked:false, number:17, height:'100px', width:'120px'}
 
 ]
-
-
-router.get('/', (req,res)=>{
- 
-
 
 
   res.render('menu.ejs', {balance:0, items:items})
@@ -66,7 +66,27 @@ var req16=req.body.req15;
 var req17=req.body.req16;
 var req18=req.body.req17;
 
-
+const items=[
+  {name:'Fish',price:10 , picture:'static/images/item1.jfif',checked:false, number:0, height:'150px', width:'200px'},
+  {name:'Malomma',price:53 , picture:'static/images/item2.jfif',checked:false, number:1, height:'150px', width:'200px'},
+  {name:'Howai',price:32 , picture:'static/images/item3.jfif',checked:false, number:2, height:'150px', width:'200px'},
+  {name:'Chiaww',price:156 , picture:'static/images/item4.jfif',checked:false, number:3, height:'150px', width:'200px'},
+  {name:'Michanna',price:166, picture:'static/images/item5.jfif ',checked:false, number:4, height:'150px', width:'200px'},
+  {name:'Blommins',price:88, picture:'static/images/item6.jfif',checked:false, number:5, height:'150px', width:'200px'},
+  {name:'Fish Large',price:10 , picture:'static/images/item1.jfif',checked:false, number:6, height:'200px', width:'240px'},
+  {name:'Malomma Large',price:53 , picture:'static/images/item2.jfif',checked:false, number:7, height:'200px', width:'240px'},
+  {name:'Howai Large',price:32 , picture:'static/images/item3.jfif',checked:false, number:8, height:'200px', width:'240px'},
+  {name:'Chiaww Large',price:156 , picture:'static/images/item4.jfif',checked:false, number:9, height:'200px', width:'240px'},
+  {name:'Michanna Large',price:166, picture:'static/images/item5.jfif ',checked:false, number:10, height:'200px', width:'240px'},
+  {name:'Blommins Large',price:88,  picture:'static/images/item6.jfif',checked:false, number:11, height:'200px', width:'240px'},
+  {name:'Fish Small',price:10 , picture:'static/images/item1.jfif',checked:false, number:12 , height:'100px', width:'120px'},
+  {name:'Malomma Small',price:53 ,picture:'static/images/item2.jfif',checked:false, number:13, height:'100px', width:'120px'},
+  {name:'Howai Small',price:32 , picture:'static/images/item3.jfif',checked:false, number:14, height:'100px', width:'120px'},
+  {name:'Chiaww Small',price:156 ,  picture:'static/images/item4.jfif',checked:false, number:15, height:'100px', width:'120px'},
+  {name:'Michanna Small',price:166,  picture:'static/images/item5.jfif ',checked:false, number:16, height:'100px', width:'120px'},
+  {name:'Blommins Small',price:88,  picture:'static/images/item6.jfif',checked:false, number:17, height:'100px', width:'120px'}
+  
+  ]
 
 var checkIndex=[]
 
