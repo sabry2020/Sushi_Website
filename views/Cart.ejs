@@ -8,23 +8,32 @@
 
 
 <body>
-
+  <h1  style="font-size: 30px; margin: 100px;"> What you Ordered So Far </h1>
   <section >
-    <div>
+    
 
 
-<h1  style="font-size: 30px; margin: 100px;"> What you Ordered So Far </h1>
 
-<ul class="check-list" style="margin: 100px;">
+<ul class="check-list cartSelectionView" style="margin: 100px;">
   <% test.forEach(item=>{ %>
     <li>
-   <h3 style="display: block;"> <%= item.name %></h3> 
+     
+     
+   <h3 style="display: block; color: orange;"> <%= item.name %></h3> 
+   
+   <img src="<%=item.picture %>" width="<%-item.width%>" height="<%-item.height%>" >
+   <strong style="color:grey;font-size: 30px; text-align: center;"><%= item.price %> $</strong> 
+
  
-   <strong style="color:grey"><%= item.price %> $</strong> 
+  
+  
   </li>
   <% }); %>
 </ul>
- </div>
+
+
+
+
 </section>
 <h1 > <strong> Balance now  : <%= balance %> $ </strong> </h1>
 

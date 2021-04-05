@@ -22,6 +22,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+
+
+
+
 <link rel="stylesheet" href="static\css\backgroundStyling.css">
 <link rel="stylesheet" href="static\css\style.css">
 <script src="static\js\app.js"></script>
@@ -33,6 +37,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Londrina+Solid&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+
+
+
 <style>
 
   h1, h2, h3{
@@ -41,7 +51,79 @@
 
 
   }
+ 
+  .imageSlider{
+    width:100%;
+    height: auto;
+  }
 
+
+  .containerOfTheIndexPage {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-leftOfTheContainer {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-leftOfTheContainer {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-rightOfTheContainer {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-rightOfTheContainer {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centeredOfTheContainer  {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.styledQuotes{
+  font-size: 100px;
+  color: white;
+  font-family: 'Reggae One', cursive;
+
+ 
+}
+.cartSelectionView{
+
+  display: grid;
+  grid-template-columns: auto auto;
+transform: translateX(-400px);
+ grid-auto-flow:row;
+ column-gap: 200px;
+}
+body, html {
+  height: 100%;
+}
+.paralax{
+/* Create the parallax scrolling effect */
+ /* Full height */
+ height: 100%;
+ width: 100%; 
+
+background-image:"url(static/images/place.jfif)";
+background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 </style>
 
