@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+  <head>
 <%- include('./partials/header.ejs') %>
-
+</head>
 <body>
 
   <div class="mt-10 mb-10 bold">
@@ -34,13 +34,13 @@
             </div>
             <div class="containerOfTheindexPage">
               <img src="static\images\Price.jpg" data-u="image"  alt="Avatar" class="image">
-             <div class="centeredOfTheContainer"><p class="styledQuotes">Low Price</p></div>
+             <div class="centeredOfTheContainer"><p class="styledQuotes" style="color:black">Low Price</p></div>
            
           </div>
                 <div>
                   <div class="containerOfTheindexPage">
                     <img src="static\images\Chef.jpg" data-u="image"  alt="Avatar" class="image">
-                   <div class="centeredOfTheContainer" ><p class="styledQuotes">Best Chefs </p></div>
+                   <div class="centeredOfTheContainer" ><p class="styledQuotes" style="color:black">Best Chefs </p></div>
                  
                 </div>
                     </div>
@@ -120,24 +120,25 @@
        background-size: cover;" >
     <div>
         <h1 style="color:white">
-            "Lorem ipsum dolor sit amet anim id est laborum Lorem ipsum dolor sit amet anim id est laborum Lorem ipsum dolor sit amet anim id est laborumv"
+            "Lorem ipsum dolor sit sit amet anim id est "
         </h1>
         <br>
         <h3 style="color: white;">
             "Lorem ipsum dolor sit amet anim id est laborum Lorem ipsum dolor sit amet anim id est laborum Lorem ipsum dolor sit amet anim id est laborumv"
         </h3>
+        
         <h3 style="color: white;">
-            "Lorem ipsum dolor sit amet anim id est laborum Lorem ipsum dolor sit amet anim id est laborum Lorem ipsum dolor sit amet anim id est laborumv"
-        </h3>
+          "Lorem ipsum dolor sit amet anim id est laborum Lorem ipsum dolor sit amet anim id est laborum Lorem ipsum dolor sit amet anim id est laborumv"
+      </h3>
     </div>
   </div>
 
 
 
 <p style=" text-align:center;">
-    <button class="btn btn-primary mb-1" data-bs-toggle="collapse" href="#multiCollapse1" role="button" aria-expanded="false" aria-controls="multiCollapse1" style="font-size: 40px;">What products we Have </button>
-    <button class="btn btn-primary mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapse2" aria-expanded="false" aria-controls="multiCollapse2"style="font-size: 40px;" >Discounts</button>
-    <button class="btn btn-primary mb-1" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapse1 multiCollapse2" style="font-size: 40px;">See all we have </button>
+    <button class="btn btn-danger mb-1 " data-bs-toggle="collapse" href="#multiCollapse1" role="button" aria-expanded="false" aria-controls="multiCollapse1" style="font-size: 40px;"><h2>What products we Have </h2></button>
+    <button class="btn btn-danger mb-1 " type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapse2" aria-expanded="false" aria-controls="multiCollapse2"style="font-size: 40px;" ><h2>Discounts</h2></button>
+    <button class="btn btn-danger mb-1 " type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapse1 multiCollapse2" style="font-size: 40px;"><h2>See all we have</h2> </button>
   </p>
   <div class="row">
     <div class="col">
@@ -157,15 +158,15 @@
         <div class="card card-body  mb-10" style="font-size: 30px;">
             <img src="static\images\discount2.jpg" >
       <h1>  purchase 3 boxes and get<strong style="color: red;"> one free</strong> </h1>
-        <a class="btn btn-danger mb-1 " style="text-decoration: none; width: 200px; text-align: center;" href="/menu">
-            Purchase
+        <a class="btn btn-danger mb-1 " style="text-decoration: none; width: 300px; text-align: center; " href="/menu#menu-cards">
+          <h2>  Purchase</h2>
         </a>
         </div>
         <div class="card card-body  mb-10" style="font-size: 30px;">
           <img src="static\images\discount1.jpg">
     <h1>  purchase 1 box and get<strong style="color: red;"> one free</strong> </h1>
-      <a class="btn btn-danger mb-1 " style="text-decoration: none; width: 200px; text-align: center;" href="/menu">
-          Purchase
+      <a class="btn btn-danger mb-1 " style="text-decoration: none; width: 300px; text-align: center;" href="/menu#menu-cards">
+        <h2>  Purchase</h2>
       </a>
       </div>
 </div>
@@ -200,9 +201,7 @@
   <h2 style=" color: white;">
     We have Multiple restaurants in Cairo and Alex.
   </h2>
-  <h2 style=" color: white;">
-    Please Rate us on google maps 
-  </h2>
+  
   <h2 style=" color: white; font-size: 40px;">
     And Thanks for Visit 
   </h2>
