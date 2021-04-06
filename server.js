@@ -23,6 +23,7 @@ const cartRouter=require('./routes/cart');
 const menuRouter=require('./routes/menu');
 const purchaseRouter=require('./routes/purchase');
 
+
 // const purchaseRouter=require('./routes/purchase');
 
 
@@ -90,6 +91,20 @@ app.get('/privacyPolicy', (req,res)=>{
 
 })
 
+
+
+app.get('/places', (req,res)=>{
+  res.render('places.ejs');
+})
+app.get('/places/Zamalek', (req,res)=>{
+
+  res.render('Zamaleek.ejs');
+})
+app.get('/places/Giza', (req,res)=>{
+
+  res.render('Giza.ejs');
+})
+
 //Session middleware 
 app.use(session({ secret:process.env.SESSION_SECRET}) );
 
@@ -97,6 +112,7 @@ app.use(session({ secret:process.env.SESSION_SECRET}) );
 app.use('/menu', menuRouter);
 app.use('/cart', cartRouter);
 app.use('/purchase', purchaseRouter);
+app.use
 
 
 app.listen( Port,console.log(`Server running on port ${Port}`));
