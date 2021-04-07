@@ -24,7 +24,7 @@ else
 res.render('Cart.ejs',{balance:0, test:[] })
     
 
-})
+ })
 
 
 router.post('/', (req,res)=>{

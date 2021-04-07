@@ -4,8 +4,7 @@ const mongoose=require('mongoose');
 const CartSchema=new mongoose.Schema({
    name:{
 type:String,
-required:true,
-default:"Not assigned"
+required:true
 
    } ,
    items:{
@@ -19,11 +18,7 @@ default:"Not assigned"
 type:Number,
 required:true
 
-   },
-  date:{
-      type:Date,
-      default: Date.now
-  }
+   }
   //holding the items 
   
 
