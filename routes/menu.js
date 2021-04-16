@@ -36,7 +36,8 @@ router.get('/', (req,res)=>{
 
 //   res.render('menu.ejs', {balance:0, items:items})
 //   // console.log('info avaialable'+req.body)
-  res.render('index.ejs');
+  res.send("Hello Stranger");
+  
 
 
 })

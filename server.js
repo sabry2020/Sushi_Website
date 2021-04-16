@@ -67,6 +67,10 @@ app.use(express.urlencoded({ extended: true }));
     
     
      });
+     app.post('/', (req,res)=>{
+
+console.log('in post index ');
+     })
 
   
 app.get('/aboutUs', (req,res)=>{
