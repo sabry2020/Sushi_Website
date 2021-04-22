@@ -110,7 +110,7 @@ app.get('/places/Giza', (req,res)=>{
 })
 
 //Session middleware 
-app.use(session({ secret:process.env.SESSION_SECRET}) );
+app.use(session({ secret:process.env.SESSION_SECRET,key: 'anything', cookie: { secure: true } }) );
 
 //Routers
 app.use('/menu', menuRouter);
